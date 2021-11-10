@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+            window.onload = function()
+            {
+                a = document.getElementById("thing").style;
+                a.width = "100%";
+                a.height = "100%";
+                setInterval(function(){
+                    
+                    let A = 0;
+                    let B = 255;
+                    a.backgroundColor = "rgb(" + Math.floor(Math.random()*(B-A+1)+A).toString() + "," + Math.floor(Math.random()*(B-A+1)+A).toString() + "," + Math.floor(Math.random()*(B-A+1)+A).toString() + ")";
+                },1)
+            }
+        </script>
+        <style>
+            body
+            {
+                margin: 0;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="thing"></div>
+    </body>
+</html>
