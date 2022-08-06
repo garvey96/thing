@@ -14695,8 +14695,8 @@ function handleComplete() {
     var data = new createjs.SpriteSheet({
         "images": [loader.getResult("bird")],
         "frames": {
-            "width": 92,
-            "height": 64,
+            "width": 1024,
+            "height": 400,
             "regX": 46,
             "regY": 32,
             "count": 3
@@ -15057,32 +15057,32 @@ function ticks(event, number, t) {
 
 
 
-    try{
-        let all_pipes = pipes.children;
-        let target_pipe;
-        let target_pipe_x;
-        for(var i = all_pipes.length - 1; i > -1; i--)
-        {
-            if(all_pipes[i].x+220 > bird.x)
-            {
-                target_pipe = i;
-                target_pipe_x = all_pipes[i].x;
-            }
-        }
-        if(bird.y+70 > all_pipes[target_pipe].y)
-        {
-            handleJumpStart();
-            return;
-        }
-        if(bird.y > 800){
-            handleJumpStart();
-        }
-    }
-    catch{
-        if(bird.y > 800){
-            handleJumpStart();
-        }
-    }
+    // try{
+    //     let all_pipes = pipes.children;
+    //     let target_pipe;
+    //     let target_pipe_x;
+    //     for(var i = all_pipes.length - 1; i > -1; i--)
+    //     {
+    //         if(all_pipes[i].x+220 > bird.x)
+    //         {
+    //             target_pipe = i;
+    //             target_pipe_x = all_pipes[i].x;
+    //         }
+    //     }
+    //     if(bird.y+70 > all_pipes[target_pipe].y)
+    //     {
+    //         handleJumpStart();
+    //         return;
+    //     }
+    //     if(bird.y > 800){
+    //         handleJumpStart();
+    //     }
+    // }
+    // catch{
+    //     if(bird.y > 800){
+    //         handleJumpStart();
+    //     }
+    // }
 }
 var apiUrl = 'flappy-backend.fly.dev';
 var rootUrl = 'flappybird.io';
